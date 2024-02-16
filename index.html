@@ -44,15 +44,15 @@
         <div class="col-4">
           <div class="input-card">
             <h1 class="text-light ms-3 display-3">Gifted</h1>
-            <form>
+            <form onsubmit="app.GiftController.createGift()">
               <div class="mb-3">
                 <label for="tag" class="form-label">Tag</label>
-                <input type="text" name="tag" class="form-control">
+                <input type="text" name="tag" class="form-control" required maxlength="200" minlength="10">
               </div>
               
               <div class="mb-3">
                 <label for="url" class="form-label">URL</label>
-                <input type="url" name="url" class="form-control">
+                <input type="url" name="url" class="form-control" required maxlength="500">
               </div>
               
               <div class="mb-3 text-end">
@@ -64,7 +64,7 @@
         </div>
         <div class="col-6">
           <div class="gift-card">
-            <div class="row justify-content-evenly">
+            <div id="giftList" class="row justify-content-evenly">
              <!-- NOTE here lies the gift cards-->
             </div>
           </div>
